@@ -12,6 +12,7 @@
 		7F91DF60207973E700B3E8F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F91DF5E207973E700B3E8F1 /* Main.storyboard */; };
 		7F91DF62207973E700B3E8F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F91DF61207973E700B3E8F1 /* Assets.xcassets */; };
 		7F91DF65207973E700B3E8F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F91DF63207973E700B3E8F1 /* LaunchScreen.storyboard */; };
+		7F91DF6F2079777F00B3E8F1 /* guille-pozzi-375035-unsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F91DF6E2079777F00B3E8F1 /* guille-pozzi-375035-unsplash.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7F91DF61207973E700B3E8F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F91DF64207973E700B3E8F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F91DF66207973E700B3E8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F91DF6E2079777F00B3E8F1 /* guille-pozzi-375035-unsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "guille-pozzi-375035-unsplash.jpg"; path = "Images/guille-pozzi-375035-unsplash.jpg"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				7F91DF5A207973E700B3E8F1 /* AppDelegate.swift */,
 				7F91DF5C207973E700B3E8F1 /* ViewController.swift */,
 				7F91DF5E207973E700B3E8F1 /* Main.storyboard */,
+				7F91DF6E2079777F00B3E8F1 /* guille-pozzi-375035-unsplash.jpg */,
 				7F91DF61207973E700B3E8F1 /* Assets.xcassets */,
 				7F91DF63207973E700B3E8F1 /* LaunchScreen.storyboard */,
 				7F91DF66207973E700B3E8F1 /* Info.plist */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F91DF65207973E700B3E8F1 /* LaunchScreen.storyboard in Resources */,
+				7F91DF6F2079777F00B3E8F1 /* guille-pozzi-375035-unsplash.jpg in Resources */,
 				7F91DF62207973E700B3E8F1 /* Assets.xcassets in Resources */,
 				7F91DF60207973E700B3E8F1 /* Main.storyboard in Resources */,
 			);

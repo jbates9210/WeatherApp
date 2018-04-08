@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,90 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guille-pozzi-375035-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="74M-SF-izw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weather Today In..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq0-OR-Ejf">
+                                <rect key="frame" x="35" y="67" width="305" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Cincinnati, San Francisco, etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-Jy-4bu">
+                                <rect key="frame" x="28" y="130" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AfC-JL-UpS"/>
+                                    <constraint firstAttribute="width" constant="320" id="qWu-t8-nk9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-6c-m0p">
+                                <rect key="frame" x="139" y="190" width="98" height="36"/>
+                                <color key="backgroundColor" red="0.32156862745098042" green="0.36862745098039218" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="64s-F8-QIp"/>
+                                    <constraint firstAttribute="height" constant="36" id="Hdk-ty-uVJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="weatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqB-Ka-MJZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-4E-WAI">
+                                <rect key="frame" x="27" y="291" width="320" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="50L-nd-er2"/>
+                                    <constraint firstAttribute="height" constant="104" id="Znd-0T-MzL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HoL-Jy-4bu" firstAttribute="centerX" secondItem="Tq0-OR-Ejf" secondAttribute="centerX" id="0dU-fU-98i"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6XW-V1-8xf"/>
+                            <constraint firstItem="yj2-6c-m0p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xe-oG-blJ"/>
+                            <constraint firstItem="WHB-4E-WAI" firstAttribute="top" secondItem="yj2-6c-m0p" secondAttribute="bottom" constant="65" id="7dV-5h-XKV"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="top" secondItem="Tq0-OR-Ejf" secondAttribute="bottom" constant="-79.5" id="XJU-8X-zrJ"/>
+                            <constraint firstItem="HoL-Jy-4bu" firstAttribute="top" secondItem="Tq0-OR-Ejf" secondAttribute="bottom" constant="30.5" id="Yyw-OA-NAj"/>
+                            <constraint firstItem="WHB-4E-WAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="a31-yU-IGB"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="efv-St-XkL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHB-4E-WAI" secondAttribute="trailing" constant="28" id="icd-2t-apP"/>
+                            <constraint firstItem="Tq0-OR-Ejf" firstAttribute="centerX" secondItem="74M-SF-izw" secondAttribute="centerX" id="pq7-BM-adz"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sxX-Gm-EmS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHB-4E-WAI" secondAttribute="bottom" constant="272" id="tJb-Dp-yqF"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x1N-KJ-nmc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="HoL-Jy-4bu" id="Juq-bW-1i7"/>
+                        <outlet property="resultLabel" destination="WHB-4E-WAI" id="paP-Qg-BPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="guille-pozzi-375035-unsplash.jpg" width="1500" height="2250"/>
+    </resources>
 </document>
