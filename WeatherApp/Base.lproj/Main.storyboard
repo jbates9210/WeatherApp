@@ -27,7 +27,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Cincinnati, San Francisco, etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-Jy-4bu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cincinnati" borderStyle="roundedRect" placeholder="Eg. Cincinnati, San Francisco, etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-Jy-4bu">
                                 <rect key="frame" x="28" y="130" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AfC-JL-UpS"/>
@@ -57,11 +57,11 @@
                                     <action selector="weatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqB-Ka-MJZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-4E-WAI">
-                                <rect key="frame" x="27" y="291" width="320" height="104"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-4E-WAI">
+                                <rect key="frame" x="27" y="291" width="320" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="50L-nd-er2"/>
-                                    <constraint firstAttribute="height" constant="104" id="Znd-0T-MzL"/>
+                                    <constraint firstAttribute="height" constant="211" id="Znd-0T-MzL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +81,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHB-4E-WAI" secondAttribute="trailing" constant="28" id="icd-2t-apP"/>
                             <constraint firstItem="Tq0-OR-Ejf" firstAttribute="centerX" secondItem="74M-SF-izw" secondAttribute="centerX" id="pq7-BM-adz"/>
                             <constraint firstItem="74M-SF-izw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sxX-Gm-EmS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHB-4E-WAI" secondAttribute="bottom" constant="272" id="tJb-Dp-yqF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHB-4E-WAI" secondAttribute="bottom" constant="165" id="tJb-Dp-yqF"/>
                             <constraint firstItem="74M-SF-izw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x1N-KJ-nmc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
