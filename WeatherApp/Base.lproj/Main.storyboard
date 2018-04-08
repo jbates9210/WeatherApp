@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,34 +16,38 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guille-pozzi-375035-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="74M-SF-izw">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="1500" height="716"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weather Today In..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq0-OR-Ejf">
-                                <rect key="frame" x="35" y="67" width="305" height="32.5"/>
+                                <rect key="frame" x="598" y="67" width="305" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="IUp-LO-mwQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cincinnati" borderStyle="roundedRect" placeholder="Eg. Cincinnati, San Francisco, etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-Jy-4bu">
-                                <rect key="frame" x="28" y="130" width="320" height="30"/>
+                                <rect key="frame" x="591" y="130" width="320" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AfC-JL-UpS"/>
-                                    <constraint firstAttribute="width" constant="320" id="qWu-t8-nk9"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q05-R4-r3k"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6lX-3J-BjV"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-6c-m0p">
-                                <rect key="frame" x="139" y="190" width="98" height="36"/>
+                                <rect key="frame" x="701" y="259" width="98" height="36"/>
                                 <color key="backgroundColor" red="0.32156862745098042" green="0.36862745098039218" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="98" id="64s-F8-QIp"/>
-                                    <constraint firstAttribute="height" constant="36" id="Hdk-ty-uVJ"/>
+                                    <constraint firstAttribute="height" constant="36" id="UWv-1E-Sqd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
                                 <state key="normal" title="Submit">
@@ -57,12 +62,8 @@
                                     <action selector="weatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqB-Ka-MJZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-4E-WAI">
-                                <rect key="frame" x="27" y="291" width="320" height="211"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="50L-nd-er2"/>
-                                    <constraint firstAttribute="height" constant="211" id="Znd-0T-MzL"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-4E-WAI">
+                                <rect key="frame" x="27" y="307" width="1445" height="211"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -70,19 +71,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HoL-Jy-4bu" firstAttribute="centerX" secondItem="Tq0-OR-Ejf" secondAttribute="centerX" id="0dU-fU-98i"/>
-                            <constraint firstItem="74M-SF-izw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6XW-V1-8xf"/>
-                            <constraint firstItem="yj2-6c-m0p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xe-oG-blJ"/>
-                            <constraint firstItem="WHB-4E-WAI" firstAttribute="top" secondItem="yj2-6c-m0p" secondAttribute="bottom" constant="65" id="7dV-5h-XKV"/>
-                            <constraint firstItem="74M-SF-izw" firstAttribute="top" secondItem="Tq0-OR-Ejf" secondAttribute="bottom" constant="-79.5" id="XJU-8X-zrJ"/>
-                            <constraint firstItem="HoL-Jy-4bu" firstAttribute="top" secondItem="Tq0-OR-Ejf" secondAttribute="bottom" constant="30.5" id="Yyw-OA-NAj"/>
-                            <constraint firstItem="WHB-4E-WAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="a31-yU-IGB"/>
-                            <constraint firstItem="74M-SF-izw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="efv-St-XkL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHB-4E-WAI" secondAttribute="trailing" constant="28" id="icd-2t-apP"/>
-                            <constraint firstItem="Tq0-OR-Ejf" firstAttribute="centerX" secondItem="74M-SF-izw" secondAttribute="centerX" id="pq7-BM-adz"/>
-                            <constraint firstItem="74M-SF-izw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sxX-Gm-EmS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHB-4E-WAI" secondAttribute="bottom" constant="165" id="tJb-Dp-yqF"/>
-                            <constraint firstItem="74M-SF-izw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x1N-KJ-nmc"/>
+                            <constraint firstItem="yj2-6c-m0p" firstAttribute="top" secondItem="HoL-Jy-4bu" secondAttribute="bottom" constant="99" id="67b-Jm-aUE"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6YA-Ki-G7l"/>
+                            <constraint firstItem="HoL-Jy-4bu" firstAttribute="top" secondItem="Tq0-OR-Ejf" secondAttribute="bottom" constant="30" id="CaQ-1y-RBE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHB-4E-WAI" secondAttribute="bottom" constant="218" id="E81-0p-wOG"/>
+                            <constraint firstItem="WHB-4E-WAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="Geb-xv-3Tr"/>
+                            <constraint firstItem="yj2-6c-m0p" firstAttribute="centerX" secondItem="WHB-4E-WAI" secondAttribute="centerX" id="H0a-dh-jnI"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JfC-Se-ooi"/>
+                            <constraint firstItem="HoL-Jy-4bu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="591" id="MGq-ej-DII"/>
+                            <constraint firstItem="Tq0-OR-Ejf" firstAttribute="centerX" secondItem="yj2-6c-m0p" secondAttribute="centerX" id="Ojf-f4-RIc"/>
+                            <constraint firstItem="Tq0-OR-Ejf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="47" id="RVN-sM-zwd"/>
+                            <constraint firstItem="Tq0-OR-Ejf" firstAttribute="centerX" secondItem="HoL-Jy-4bu" secondAttribute="centerX" id="TjJ-cy-odc"/>
+                            <constraint firstItem="WHB-4E-WAI" firstAttribute="top" secondItem="yj2-6c-m0p" secondAttribute="bottom" constant="12" id="WGu-Oc-TCS"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="d07-Al-a71"/>
+                            <constraint firstItem="yj2-6c-m0p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="701" id="d5h-UG-l3F"/>
+                            <constraint firstItem="74M-SF-izw" firstAttribute="centerX" secondItem="WHB-4E-WAI" secondAttribute="centerX" id="qBZ-9F-Mkp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
